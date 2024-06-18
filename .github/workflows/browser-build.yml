@@ -1,11 +1,15 @@
 name: Browser tests
+
 on: push
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
@@ -15,7 +19,7 @@ jobs:
 
       - name: Cypress Test Report
         if: always() # To generate reports for failures tests also.
-      - uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: Mochawesome HTML Report - Chrome Browser Tests
           path: cypress/reports/html
