@@ -8,6 +8,6 @@
 6. Add "const cucumber = require('cypress-cucumber-preprocessor').default" in cypress.config.js
 7. Add "cypress-cucumber-preprocessor":{
     "nonGlobalStepDefinition":true,
-    "step_defintions":"cypress/e2e/step-definitions"
+    "stepDefinitions":"cypress/e2e/step_definitions"
   } in package.json file.
 8. npm i --save-dev cypress-mochawesome-reporter
