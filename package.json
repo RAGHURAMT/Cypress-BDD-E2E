@@ -4,8 +4,8 @@
   "description": "Cucumber Framework",
   "main": "index.js",
   "scripts": {
-    "test:registerFlow": "npx cypress run --spec cypress/e2e/features/addToCart.feature",
-    "test:addToCartFlow": "npx cypress run --spec cypress/e2e/features/registration.feature",
+    "test:addToCartFlow": "npx cypress run --spec cypress/e2e/features/addToCart.feature",
+    "test:registerFlow": "npx cypress run --spec cypress/e2e/features/registration.feature",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Raghuram",

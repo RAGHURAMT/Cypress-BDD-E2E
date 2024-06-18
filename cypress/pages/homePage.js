@@ -4,7 +4,8 @@ export class homePage{
         click_search:'.btn.btn-default',
         product:'img[title="MacBook"]',
         addToCart:`[onclick="cart.add('43', '1');"]`,
-        successMessage:'div.alert.alert-success.alert-dismissible'
+        successMessage:'div.alert.alert-success.alert-dismissible',
+        addToWishlist: '[data-original-title="Add to Wish List"]'
     }
 
     searchProduct(productName){
@@ -19,5 +20,9 @@ export class homePage{
     verifySuccessMessage(){
         cy.wait(2000);
         return cy.get(this.weblocators.successMessage);
+    }
+
+    addToWishlist(){
+        cy.get(this.weblocators.addToWishlist).first().click();
     }
 }

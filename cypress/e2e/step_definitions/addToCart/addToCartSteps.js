@@ -18,5 +18,13 @@ And("add the product to the cart", ()=>{
 
 Then("verify successful message is displayed", async()=>{
     await hp.verifySuccessMessage().should('contain', testData.message.successMessage);
+});
+
+When("click on Add to wishlist button", async()=>{
+    await hp.addToWishlist();
+});
+
+Then("verify wishlist successful message is displayed", async()=>{
+    await hp.verifySuccessMessage().should('contain', testData.message.wishListSuccess);
 })
 
