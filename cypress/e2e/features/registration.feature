@@ -8,4 +8,3 @@ Scenario: Verify user is able to register in the application
     Given user registration page is opened
     When user entered the form details and click on continue
     Then user is registered in the application 
-
