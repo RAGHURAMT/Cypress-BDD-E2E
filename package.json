@@ -1,0 +1,22 @@
+{
+  "name": "cypress-bdd-e2e",
+  "version": "2.0.0",
+  "description": "Cucumber Framework",
+  "main": "index.js",
+  "scripts": {
+    "test:registerFlow": "npx cypress run --spec cypress/e2e/features/addToCart.feature",
+    "test:addToCartFlow": "npx cypress run --spec cypress/e2e/features/registration.feature",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raghuram",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.11.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinition": true,
+    "stepDefinitions": "cypress/e2e/step_definitions/"
+  }
+}
